@@ -10,37 +10,56 @@ body{
 main{
 	margin-top: 4em;
 }
+code{
+	display: block;
+	padding: 4em;
+	border-radius: 0.25em;
+	background-color: var(--base-color-white);
+
+	white-space: pre-line;
+}
+nav{
+	background-color: var(--base-color-black);
+}
+nav svg{
+	height: 2em;
+	fill: var(--base-color-white);
+}
 @media(max-width:768px){
+	main{
+		padding: 1em 2em;
+	}
 	nav{
 		position: fixed;
 		top: 0;
 		height: 4em;
 		width: 100vw;
-		background-color: var(--base-color-bright-white);
 		text-align: center;
 	}
 	nav svg{
-		height: 2em;
-		padding: 1em;
-		fill: var(--base-color-black);
+		margin: 1em;
 	}
 	nav ul{
 		position: fixed;
 		top: 0;
 		left: -100vw;
 	}
+	nav ul a{
+		color: var(--base-color-bright-white);
+	}
 }
 @media(min-width:769px){
+	main{
+		padding: 1em 4em;
+	}
 	nav{
 		height: 4em;
 		padding: 0 6em;
-		background-color: var(--base-color-black);
 	}
 	nav svg{
 		float: left;
-		height: 2em;
-		padding: 1em 2em;
-		fill: var(--base-color-white);
+		margin: 1em 2em;
+		fill: var(--base-color-gray);
 		transition: fill 250ms;
 	}
 	nav ul{
@@ -55,7 +74,7 @@ main{
 	nav ul li a{
 		display: block;
 		padding: 0 2em;
-		color: var(--base-color-white);
+		color: var(--base-color-gray);
 		text-decoration: none;
 		line-height: 4em;
 		transition: color 250ms;
