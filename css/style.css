@@ -2,6 +2,10 @@
 html{
 	background-color: var(--base-color-black);
 	font-family: 'Roboto Condensed', sans-serif;
+	-webkit-tap-highlight-color: var(--tab-color-highlight);
+	-moz-tap-highlight-color: var(--tab-color-highlight);
+	-ms-tap-highlight-color: var(--tab-color-highlight);
+	-o-tap-highlight-color: var(--tab-color-highlight);
 }
 body{
 	margin: 0;
@@ -27,6 +31,8 @@ nav{
 }
 nav svg{
 	height: 2em;
+}
+nav svg a{
 	fill: var(--base-color-gray);
 }
 nav ul{
@@ -61,11 +67,13 @@ footer{
 		background-color: var(--base-color-bright-white);
 	}
 	nav svg{
-		margin: 1em;
-		fill: var(--base-color-bright-white);
-		transition: fill 400ms;
+		padding: 1em;
 	}
-	nav.active svg{
+	nav svg a{
+		transition: fill 400ms;
+		fill: var(--base-color-bright-white);
+	}
+	nav.active svg a{
 		fill: var(--base-color-black);
 	}
 	nav ul{
@@ -97,7 +105,9 @@ footer{
 		padding: 0 6em;
 	}
 	nav svg{
-		margin: 1em 2em;
+		padding: 1em 2em;
+	}
+	nav svg a{
 		transition: fill 250ms;
 	}
 	nav ul{
@@ -118,7 +128,7 @@ footer{
 	nav a:hover{
 		color: var(--base-color-bright-white);
 	}
-	nav svg:hover{
+	nav svg a:hover{
 		fill: var(--base-color-bright-white);
 	}
 }
