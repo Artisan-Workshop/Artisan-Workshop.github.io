@@ -1,21 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
 html{
-	background-color: var(--base-color-bright-white);
+	background-color: var(--base-color-black);
 	font-family: 'Roboto Condensed', sans-serif;
 }
 body{
 	margin: 0;
 }
+.preload *{
+	transition: none !important;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
 main{
-	margin-top: 4em;
+	box-sizing: border-box;
+	background-color: var(--base-color-white);
 }
 nav{
+	position: fixed;
+	top: 0;
+	height: 4em;
+	width: 100vw;
+	box-sizing: border-box;
+	padding: 0 6em;
+	
 	background-color: var(--base-color-black);
 }
 nav svg{
 	height: 2em;
-	fill: var(--base-color-white);
+	fill: var(--base-color-gray);
+}
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: var(--base-color-gray);
 }
 code{
 	display: block;
@@ -24,19 +43,21 @@ code{
 	background-color: var(--base-color-white);
 	white-space: pre-line;
 }
+footer{
+	padding: 2em;
+	color: var(--base-color-white);
+	background-color: var(--base-color-black);
+}
 @media(max-width:768px){
 	main{
-		padding: 1em 2em;
+		padding: 6em 2em 2em;
 	}
 	nav{
-		position: fixed;
-		top: 0;
-		height: 4em;
-		width: 100vw;
 		text-align: center;
 	}
 	nav svg{
 		margin: 1em;
+		fill: var(--base-color-bright-white);
 	}
 	nav ul{
 		position: fixed;
@@ -49,16 +70,10 @@ code{
 }
 @media(min-width:769px){
 	main{
-		padding: 1em 4em;
-	}
-	nav{
-		height: 4em;
-		padding: 0 6em;
+		padding: 6em 4em 2em;
 	}
 	nav svg{
-		float: left;
 		margin: 1em 2em;
-		fill: var(--base-color-gray);
 		transition: fill 250ms;
 	}
 	nav ul{
@@ -73,7 +88,6 @@ code{
 	nav ul li a{
 		display: block;
 		padding: 0 2em;
-		color: var(--base-color-gray);
 		text-decoration: none;
 		line-height: 4em;
 		transition: color 250ms;
