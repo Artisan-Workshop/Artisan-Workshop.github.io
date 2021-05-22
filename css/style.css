@@ -6,7 +6,7 @@ html{
 body{
 	margin: 0;
 }
-.preload *{
+body.preload *{
 	transition: none !important;
 	-webkit-transition: none !important;
 	-moz-transition: none !important;
@@ -23,13 +23,14 @@ nav{
 	height: 4em;
 	width: 100vw;
 	box-sizing: border-box;
-	padding: 0 6em;
-	
 	background-color: var(--base-color-black);
 }
 nav svg{
 	height: 2em;
 	fill: var(--base-color-gray);
+}
+nav ul{
+	list-style: none;
 }
 nav ul li a{
 	display: block;
@@ -44,7 +45,7 @@ code{
 	white-space: pre-line;
 }
 footer{
-	padding: 2em;
+	padding: 4em;
 	color: var(--base-color-white);
 	background-color: var(--base-color-black);
 }
@@ -54,23 +55,46 @@ footer{
 	}
 	nav{
 		text-align: center;
+		transition: background-color 400ms;
+	}
+	nav.active{
+		background-color: var(--base-color-bright-white);
 	}
 	nav svg{
 		margin: 1em;
 		fill: var(--base-color-bright-white);
+		transition: fill 400ms;
+	}
+	nav.active svg{
+		fill: var(--base-color-black);
 	}
 	nav ul{
+		display: block;
 		position: fixed;
-		top: 0;
+		top: 4em;
 		left: -100vw;
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+		background-color: var(--base-color-black);
+		transition: left 400ms, background-color 400ms;
 	}
-	nav ul a{
-		color: var(--base-color-bright-white);
+	nav.active ul{
+		left: 0;
+		background-color: var(--base-color-bright-white);
+	}
+	nav ul li a{
+		padding: 1.5em;
+		color: var(--base-color-black);
 	}
 }
 @media(min-width:769px){
 	main{
 		padding: 6em 4em 2em;
+	}
+	nav{
+		padding: 0 6em;
 	}
 	nav svg{
 		margin: 1em 2em;
@@ -83,7 +107,6 @@ footer{
 	}
 	nav ul li{
 		float: left;
-		list-style: none;
 	}
 	nav ul li a{
 		display: block;
