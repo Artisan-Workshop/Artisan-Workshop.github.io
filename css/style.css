@@ -10,20 +10,19 @@ body{
 main{
 	margin-top: 4em;
 }
-code{
-	display: block;
-	padding: 4em;
-	border-radius: 0.25em;
-	background-color: var(--base-color-white);
-
-	white-space: pre-line;
-}
 nav{
 	background-color: var(--base-color-black);
 }
 nav svg{
 	height: 2em;
 	fill: var(--base-color-white);
+}
+code{
+	display: block;
+	padding: 4em;
+	border-radius: 0.25em;
+	background-color: var(--base-color-white);
+	white-space: pre-line;
 }
 @media(max-width:768px){
 	main{
